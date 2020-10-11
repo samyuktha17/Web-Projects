@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href = "styles.css" rel = "stylesheet" type = "text/css">
+        <title>Stock Search</title>
+    </head>
+
+    <body>
+            
+        <div class = "full-page">
+            <div class = "search-box">
+                <p class = "search-box-title"> Stock Search </p>
+                <form id = "stock-search" action="." method = "get">
+                    <label for = "stock-sticker-symbol"> Enter Stock Ticker Symbol <span class = "req">*</span> </label>
+                    <input type = "text" id = "stock-sticker-symbol" name = "stock-sticker-symbol" required/>
+                    <br>
+                    <button id = "button-submit" class = "button1" type = "button"> Search </button>  
+                    <button id = "button-clear" class = "button2" onclick="erase()" type = "button"> Clear </button> 
+                 </form>  
+                <hr> 
+            </div>
+            <p class = "error-message" id = "err404">Error : No record has been found, please enter a valid symbol </p>
+            <div class = "output-content" id = "out-cont">
+                
+                <ul class = "tabs">
+                    <li id = "tab1" data-target = "#company-outlook" class = "selected" onclick="displayData(this.id)"> Company Outlook </li>
+                    <li id = "tab2" data-target = "#stock-summary" onclick="displayData(this.id)"> Stock Summary </li>
+                    <li id = "tab3" data-target = "#charts" onclick="displayData(this.id)"> Charts </li>
+                    <li id = "tab4" data-target = "#news" onclick="displayData(this.id)"> Latest News </li>
+                </ul>
+                <div class = "tab-content">
+                    <div class = "panel active" id = "company-outlook">
+                        <table>
+                            <tr>
+                                <td class = "label"> Company Name </td>
+                                <td class = "label-content" id = "cname"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Stock Ticker Symbol </td>
+                                <td class = "label-content" id = "symb1"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Stock Exchange Code </td>
+                                <td class = "label-content" id = "sed"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label">Company Start Date </td>
+                                <td class = "label-content" id = "csd"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Description </td>
+                                <td class = "label-content" id = "desc"> placeholder </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class = "panel" id = "stock-summary">
+                        <table>
+                            <tr>
+                                <td class = "label"> Stock Ticker Symbol </td>
+                                <td class = "label-content" id = "symb2"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Trading Day </td>
+                                <td class = "label-content" id = "tday"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Previous Closing Price </td>
+                                <td class = "label-content" id = "pcp"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Opening Price </td>
+                                <td class = "label-content" id = "op"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> High Price </td>
+                                <td class = "label-content" id = "hp"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Low Price </td>
+                                <td class = "label-content" id = "lop"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Last Price </td>
+                                <td class = "label-content" id = "lap"> placeholder </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Change </td>
+                                <td class = "label-content" id = "change"> placeholder <img src="" class = "arrow"></td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Change Percent </td>
+                                <td class = "label-content" id = "changep"> placeholder <img src="" class = "arrow"> </td>
+                            </tr>
+                            <tr>
+                                <td class = "label"> Number of Shares Traded</td>
+                                <td class = "label-content" id = "numst"> placeholder </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class = "panel" id = "charts">
+                        <p> charts </p>
+                    </div>
+                    <div class = "panel" id = "news">
+                        <div class = "news-block" id = "nblock1">
+                            <div class = "image-container">
+                                <img src="">
+                            </div>
+                            <div class = "info-block">
+                                <p class = "title"></p>
+                                <p class = "date"></p>
+                                <a href=""> See Original Post</a>
+                            </div>
+                        </div>
+
+
+                        <div class = "news-block" id = "nblock2">
+                            <div class = "image-container">
+                                <img src="">
+                            </div>
+                            <div class = "info-block">
+                                <p class = "title"></p>
+                                <p class = "date"></p>
+                                <a href=""> See Original Post</a>
+                            </div>
+                        </div>
+
+
+                        <div class = "news-block" id = "nblock3">
+                            <div class = "image-container">
+                                <img src="">
+                            </div>
+                            <div class = "info-block">
+                                <p class = "title"></p>
+                                <p class = "date"></p>
+                                <a href=""> See Original Post</a>
+                            </div>
+                        </div>
+
+
+                        <div class = "news-block" id = "nblock4">
+                            <div class = "image-container">
+                                <img src="">
+                            </div>
+                            <div class = "info-block">
+                                <p class = "title"></p>
+                                <p class = "date"></p>
+                                <a href=""> See Original Post</a>
+                            </div>
+                        </div>
+
+                        <div class = "news-block" id = "nblock5">
+                            <div class = "image-container">
+                                <img src="">
+                            </div>
+                            <div class = "info-block">
+                                <p class = "title"></p>
+                                <p class = "date"></p>
+                                <a href=""> See Original Post</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+        
+            
+            
+    </body>
+
+
+    <script>
+
+
+        // This function is called when the clear button is clicked
+        function erase(){
+            // ev.preventDefault();
+            document.getElementById('stock-search').reset();
+            document.getElementById("out-cont").style.display = "none";
+            document.getElementById("err404").style.display = "none";
+        
+        }
+        
+
+        function displayData(tid){
+
+            document.getElementById("tab1").className="notselected";
+            document.getElementById("tab2").className="notselected";
+            document.getElementById("tab3").className="notselected";
+            document.getElementById("tab4").className="notselected";
+            document.getElementById(tid).className="selected";
+
+            const tabs = document.querySelector('.tabs');
+            const panels = document.querySelectorAll('.panel');
+            tabs.addEventListener('click', function(e){
+                if (e.target.tagName == "LI"){
+                    
+                    const targetPanel = document.querySelector(e.target.dataset.target);
+                    panels.forEach(function(panel){
+                        if (panel == targetPanel){
+                            panel.classList.add('active');
+                        }
+                        else{
+                            panel.classList.remove('active');
+                        }
+                    })
+                }
+            })
+
+        }
+
+
+        
+        // This function is called when the submit button is clicked
+        function getData(data){
+            // Creating a XMLHttpRequest Object to send form data to the backend
+            let XHR = new XMLHttpRequest();
+            XHR.onreadystatechange = function() {
+                
+                    console.log(this.responseText);
+                    obj = JSON.parse(this.responseText);
+                    
+                    if (this.responseText == "{}") {
+                        
+                        // document.getElementById("out-cont").style.display = "block";
+                        document.getElementById("err404").style.display = "block";
+                        
+                        
+                    }
+                    else {
+                        
+                        var cout = obj["tab1"];
+                        document.getElementById("cname").innerHTML = cout.company_name;
+                        document.getElementById("symb1").innerHTML = cout.stock_ticker_symbol;
+                        document.getElementById("sed").innerHTML = cout.stock_exchange_code;
+                        document.getElementById("csd").innerHTML = cout.company_start_date;
+                        document.getElementById("desc").innerHTML = cout.description;
+
+
+                        var ssum = obj["tab2"];
+                        document.getElementById("symb2").innerHTML = ssum.stock_ticker_symbol;
+                        document.getElementById("tday").innerHTML = ssum.trading_day;
+                        document.getElementById("pcp").innerHTML = ssum.previous_closing_price;
+                        document.getElementById("op").innerHTML = ssum.opening_price;
+                        document.getElementById("hp").innerHTML = ssum.high_price;
+                        document.getElementById("lop").innerHTML = ssum.low_price;
+                        document.getElementById("lap").innerHTML = ssum.last_price;
+                        document.getElementById("change").innerHTML = ssum.change;
+                        document.getElementById("changep").innerHTML = ssum.change_percent + '%';
+                        document.getElementById("numst").innerHTML = ssum.no_shares_traded;
+
+                        var news1 = obj["tab4"]['0'];
+                        var news2 = obj["tab4"]['1'];
+                        var news3 = obj["tab4"]['2'];
+                        var news4 = obj["tab4"]['3'];
+                        var news5 = obj["tab4"]['4'];
+                        var MAX_LENGTH = 63;
+                        if (news1['image']){
+                            var imgc = document.getElementById("nblock1").getElementsByClassName("image-container")[0].getElementsByTagName("img")[0];
+                            var title = document.getElementById("nblock1").getElementsByClassName("info-block")[0].getElementsByClassName("title")[0];
+                            var pdate = document.getElementById("nblock1").getElementsByClassName("info-block")[0].getElementsByClassName("date")[0];
+                            var link = document.getElementById("nblock1").getElementsByClassName("info-block")[0].getElementsByTagName("a")[0];
+                           
+                            imgc.src = news1['image'];
+                            title.innerHTML = news1['title'];
+                            pdate.innerHTML = 'Published Date:  ' + news1['date'];
+                            link.href = news1['link'];
+                        
+                        }
+
+                        if (news2['image']){
+                            var imgc = document.getElementById("nblock2").getElementsByClassName("image-container")[0].getElementsByTagName("img")[0];
+                            var title = document.getElementById("nblock2").getElementsByClassName("info-block")[0].getElementsByClassName("title")[0];
+                            var pdate = document.getElementById("nblock2").getElementsByClassName("info-block")[0].getElementsByClassName("date")[0];
+                            var link = document.getElementById("nblock2").getElementsByClassName("info-block")[0].getElementsByTagName("a")[0];
+                            imgc.src = news2['image'];
+                            title.innerHTML = news2['title'];
+                            pdate.innerHTML = 'Published Date:  ' + news2['date'];
+                            link.href = news2['link'];
+                        }
+                        if (news3['image']){
+                            var imgc = document.getElementById("nblock3").getElementsByClassName("image-container")[0].getElementsByTagName("img")[0];
+                            var title = document.getElementById("nblock3").getElementsByClassName("info-block")[0].getElementsByClassName("title")[0];
+                            var pdate = document.getElementById("nblock3").getElementsByClassName("info-block")[0].getElementsByClassName("date")[0];
+                            var link = document.getElementById("nblock3").getElementsByClassName("info-block")[0].getElementsByTagName("a")[0];
+                            imgc.src = news3['image'];
+                            title.innerHTML = news3['title'];
+                            pdate.innerHTML = 'Published Date:  ' + news3['date'];
+                            link.href = news3['link'];
+                        }
+                        if (news4['image']){
+                            var imgc = document.getElementById("nblock4").getElementsByClassName("image-container")[0].getElementsByTagName("img")[0];
+                            var title = document.getElementById("nblock4").getElementsByClassName("info-block")[0].getElementsByClassName("title")[0];
+                            var pdate = document.getElementById("nblock4").getElementsByClassName("info-block")[0].getElementsByClassName("date")[0];
+                            var link = document.getElementById("nblock4").getElementsByClassName("info-block")[0].getElementsByTagName("a")[0];
+                            imgc.src = news4['image'];
+                            title.innerHTML = news4['title'];
+                            pdate.innerHTML = 'Published Date:  ' + news4['date'];
+                            link.href = news4['link'];
+                        }
+                        if (news5['image']){
+                            var imgc = document.getElementById("nblock5").getElementsByClassName("image-container")[0].getElementsByTagName("img")[0];
+                            var title = document.getElementById("nblock5").getElementsByClassName("info-block")[0].getElementsByClassName("title")[0];
+                            var pdate = document.getElementById("nblock5").getElementsByClassName("info-block")[0].getElementsByClassName("date")[0];
+                            var link = document.getElementById("nblock5").getElementsByClassName("info-block")[0].getElementsByTagName("a")[0];
+                            imgc.src = news5['image'];
+                            title.innerHTML = news5['title'];
+                            pdate.innerHTML = 'Published Date: ' + news5['date'];
+                            link.href = news5['link'];
+                        }
+                        
+                        
+                        document.getElementById("out-cont").style.display = "block";
+
+                    }
+                    
+                    
+            };
+            
+            var content = document.getElementById("stock-sticker-symbol").value;
+            
+            try{
+                XHR.open('GET',"/todo/api/v1.0/todo/"+content, true);
+                XHR.send(); // data is sent to the server correctly
+            }
+            
+            catch{
+                console.log("ERROR: SOMETHING WENT WRONG")
+            }
+            
+        }
+
+        document.getElementById('button-submit').addEventListener('click', function(){
+            getData({test:'ok'});
+        })
+
+    </script>
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
