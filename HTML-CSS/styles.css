@@ -1,0 +1,163 @@
+/* Done */
+* { margin: 0;
+	}
+
+.full-page{
+	margin: 0 auto;
+	width: 800px;
+	
+}
+
+
+.first {
+	color:#073abe;
+	font-family: "Lora";
+	font-size: 30px;
+	font-weight: bold;
+	margin-left:42px;
+	margin-right:42px;
+	margin-bottom:14px;
+	margin-top:19px;
+}
+
+
+hr{	
+	border-bottom: 0;
+	border-width: 1px;
+	color: rgba(0,0,0,0.50);
+}
+
+.header{
+	border:none;
+	margin-left: 40px;
+	margin-top:11.25px;
+	margin-bottom:5px;
+	margin-right:30px;
+	position: relative;
+}
+
+.menu-content{
+	table-layout :fixed;
+	color: black;
+	font-size: 9px;
+	font-family: Calibri;
+	font-weight:450;
+	border-spacing: 1px;
+	border-collapse: separate;
+}
+
+
+.content {
+	margin-left: 40px;
+	margin-right:40px;
+	margin-top: 21.25px;
+	margin-bottom:0px;
+}
+
+
+.component1 {
+	position:relative;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	
+}
+.parallax{
+	background: url("Cutlery.png") no-repeat;
+	background-attachment: fixed;
+	background-size: 716px 605px;
+	height: 370px;
+	width: 690px;
+	background-position-x: center;
+}
+
+
+.component1 h1{
+	color: #073abe;
+	font-family: Georgia;
+	font-size: 31.25px;
+	font-weight: bold;
+	position: absolute;	
+	position : absolute;
+	top: 38.76px;
+	left: 33px;
+}
+
+
+.component1 .shop-now-button{
+	position: absolute;
+	top:151.25px;
+	left:33px;
+}
+
+
+.component1 .shop-now-button button{
+	border: none;
+	background-color: white;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 9px;
+	font-weight: 290;
+	/* padding: 1.5px 1.5px 1.5px 1.5px; */
+	width:68px;
+	height:28.75px;
+}
+
+@font-face{
+	font-family:"Haboro W01 Norm Regular";
+	src:url("Fonts/5224449/315fff8b-8508-4943-aaf5-f12eaf0d3c7c.woff2") format("woff2"),url("Fonts/5224449/8c445bd2-6d76-44d5-b31f-0d019c5e074e.woff") format("woff");
+	font-weight: bolder;
+	-moz-osx-font-smoothing: subpixel-antialiased;
+}
+
+
+.header1{
+	margin-top:30px;
+	margin-bottom:25px;
+	font-size:18.75px;
+	color:#073abe;
+	text-align:center;
+	font-family: "Haboro W01 Norm Regular";
+	
+}
+
+
+.component2 {
+	border-spacing: 0px 0px;
+	border-collapse: separate;
+	position: relative;
+	
+}
+.space{
+	padding-left:12px;
+	padding-right:12px;
+}
+.image {
+	background-color : #a4e1e9; 
+	padding:0px 14px 0px 0px;
+	align-content: left;
+}
+
+img {
+	height: 300.25px;
+    width: 332px;
+	padding-bottom:0;
+	margin-bottom:-5px;
+	margin-top:0px;
+  }
+
+
+.header2{
+	color: #073abe;
+	font-size: 13.75px;
+	font-family: Georgia;
+	text-align: center;
+	font-weight:600;
+}
+	
+
+	
+	
